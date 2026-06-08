@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 🦷 Core Dentistry - Modern Dental Clinic Web App & Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Core Dentistry is a premium, fully-responsive, and modern web application designed for dental clinics. It provides a seamless booking experience for patients and an intuitive, real-time management dashboard for clinic staff. 
 
-## Available Scripts
+It is designed with polished user interfaces, custom CSS micro-animations, glassmorphic elements, and state-of-the-art interactive feedback.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 💡 What Problem Does It Solve?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Traditional dental clinics rely heavily on phone calls and manual entries for appointment booking, resulting in:
+- Inconvenience for patients booking outside office hours.
+- Inefficiency and scheduling conflicts for clinic staff.
+- A lack of transparency regarding treatment details, duration, pricing, and live doctor availability.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Core Dentistry** bridges this gap by providing:
+1. **24/7 Self-Service Booking**: Patients can browse treatments, view pricing/duration, select preferred time slots, and book in under a minute.
+2. **Staff Transparency & Efficiency**: An administrative dashboard allows clinic staff to track, filter, sort, and cycle the status of appointments in real time.
+3. **Interactive & Visual Engagement**: Beautiful scroll-linked entrance animations, stat counters, and responsive UI components build high patient trust.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technology Stack
 
-### `npm run build`
+- **Frontend Core**: React.js (Component-driven architecture)
+- **Styling**: Modern Vanilla CSS (HSL custom properties, Flexbox/Grid, Responsive layouts, Keyframes animations)
+- **Icons**: React Icons
+- **State Management & Persistence**: React Hooks (`useState`, `useEffect`, `useRef`) & `localStorage` (for persistent appointments database)
+- **Celebration Effects**: Canvas Confetti (for booking completion feedback)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✨ Main Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. 🏥 Patient Portal
+- **Interactive Booking Form**: Multi-step booking experience featuring treatment selectors, date picker, active time slot selection (with green visual active states and tick indicators), and real-time validation.
+- **Treatment Cards & Detail Modals**: High-fidelity cards displaying clinic treatments, which can be clicked to open detailed modals displaying cost, duration, and direct-booking CTA.
+- **Search & Live Filters**: Real-time filtering of treatments by category or text search query with animated skeleton loading states.
+- **Frictionless Navigation**: Sleek sticky navigation header and responsive mobile menu.
+- **Confetti Celebration**: Immediate reward micro-interaction upon successful booking submission.
 
-### `npm run eject`
+### 2. 📊 Staff Dashboard (`/dashboard`)
+- **Appointment Table**: Clean tabular view of all booked appointments fetched from persistent storage.
+- **Status Progression**: Cycle appointment status dynamically: `Pending` ➡️ `Confirmed` ➡️ `Completed`.
+- **Advanced Filtering**: Separate tabs to view `All`, `Pending`, `Confirmed`, and `Completed` appointments.
+- **Sorting Control**: Sort appointments by Date, Patient Name, or Status.
+- **Administrative Actions**: Delete individual records or clear the entire database for testing.
+- **Real-Time Stat Cards**: Live counts of appointments grouped by status category.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. 💫 Advanced UX & Micro-Animations
+- **Scroll-Linked Entrance Animations**: Custom React intersection observer hook (`useScrollAnimation`) triggers elegant fade-in-up animations for sections when they enter the viewport.
+- **Animated Stat Counter**: The "About Us" metrics dynamically count up from `0` to their final values when scrolled into view.
+- **Skeleton Loading Shimmer**: A realistic 1.3-second shimmer placeholder states when loading treatments to mimic external API delays.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Installation & Local Run
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Vishwas1726/<repo-name>.git
+   cd dental-clinic
+   ```
 
-## Learn More
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
