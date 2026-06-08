@@ -1,0 +1,105 @@
+.doctor-section {
+  padding: 110px 10%;
+  background: var(--color-bg-page);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.doctor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.doctor-info {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.doctor-info h2 {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  color: var(--color-text-main);
+  position: relative;
+}
+
+.doctor-info h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary-sage);
+  margin-top: 14px;
+}
+
+.doctor-info p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--color-text-secondary);
+}
+
+.doctor-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Elegant border background effect for doctor image */
+.doctor-image::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--color-primary-sage);
+  border-radius: 12px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.doctor-image img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 12px;
+  z-index: 2;
+  box-shadow: 0 12px 30px rgba(45, 58, 48, 0.1);
+  display: block;
+  background: var(--color-bg-card); /* in case of transparency */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media(max-width: 900px) {
+  .doctor-section {
+    padding: 70px 5%;
+  }
+  .doctor-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+  /* Swap order so text stays above image on mobile */
+  .doctor-info {
+    order: 1;
+  }
+  .doctor-image {
+    order: 2;
+  }
+  .doctor-image::before {
+    display: none;
+  }
+  .doctor-info h2::after {
+    margin: 14px auto 0 auto;
+  }
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  --color-bg-page: #FDFBF7; /* Luxury warm off-white/linen */
+  --color-bg-card: #FFFFFF;
+  --color-bg-panel: #F5F0E6; /* Creamy sand panel */
+  --color-text-main: #2D2823; /* Deep bronze/charcoal (sophisticated dark neutral) */
+  --color-text-secondary: #5C534A; /* Muted bronze gray */
+  --color-primary-sage: #8C704B; /* Warm Oak/Sand primary */
+  --color-primary-sage-hover: #70593B; /* Deeper Oak for hover */
+  --color-accent-sand: #D1B994; /* Soft champagne gold accent */
+  --color-border: #ECE5D8; /* Delicate warm border */
+  
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-sans: 'Inter', Arial, sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: var(--font-sans);
+  background: var(--color-bg-page);
+  color: var(--color-text-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.3;
+}
+
+a{
+  text-decoration:none;
+  color: inherit;
+  transition: all 0.25s ease;
+}
+
+button{
+  cursor:pointer;
+  font-family: var(--font-sans);
+  transition: all 0.25s ease;
+}
+
+input, textarea, select {
+  font-family: var(--font-sans);
+}
+
+/* Accessibility: Keyboard focus indicator */
+:focus-visible {
+  outline: 2.5px solid var(--color-primary-sage);
+  outline-offset: 3px;
+}
+
+/* Accessibility: Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+

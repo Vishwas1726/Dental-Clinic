@@ -1,0 +1,88 @@
+.hero {
+  height: 580px;
+  background: linear-gradient(
+      rgba(45, 40, 35, 0.75), 
+      rgba(45, 40, 35, 0.85)
+    ),
+    url("../assets/hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 24px;
+}
+
+.hero-content {
+  max-width: 680px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  color: #f1f3f1;
+}
+
+.hero-button {
+  display: inline-block;
+  background: #ffffff;
+  color: var(--color-text-main);
+  padding: 16px 36px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #ffffff;
+}
+
+.hero-button:hover {
+  background: var(--color-bg-page);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border-color: var(--color-bg-page);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 768px) {
+  .hero {
+    height: 480px;
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .hero-button {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}
